@@ -23,7 +23,6 @@
         padding: 20px;
         border-radius: 26px;
         box-sizing: border-box;
-        background-color: palevioletred;
         h1 {
             margin: 0;
         }
@@ -46,16 +45,13 @@
     margin: 25px auto;
     padding: 0 20px;
     border-radius: 25px;
-    background-color: black;
-    color: white;
     text-transform: uppercase;
-    border: 1px solid black;
     // font-size: 14px;
     font-weight: bolder;
+    border: none;
     cursor: pointer;
   
     &:hover {
       background-color: transparent;
-      border: 1.5px solid black;
     }
 }

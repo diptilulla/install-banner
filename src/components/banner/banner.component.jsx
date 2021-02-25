@@ -8,7 +8,7 @@ const Banner = ({ heading, description, install_button, bgcolor, textcolor }) =>
         
             <h1>{heading}</h1>
             <p className='desc'>{description}</p>
-            <button className='custom-button'> {install_button} </button>
+            <button className='custom-button' style={{ backgroundColor: textcolor, color: bgcolor}}> {install_button} </button>
             </div>
         </div>
     </div>
