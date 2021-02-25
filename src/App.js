@@ -1,25 +1,40 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Banner from './components/banner/banner.component';
+import UpdateBanner from './components/update-banner/update-banner.component';
+class App extends React.Component {
+  constructor() {
+    super();
+
+    this.state = {
+      heading: 'Install our application',
+      description: 'It offers great performance & does not take any extra space',
+      bgcolor: '#9013FE',
+      textcolor: '#ffffff',
+      install_button: 'Install Now'
+    }
+  }
+
+
+  handleChange = event => {
+    const { name, value } = event.target;
+
+    this.setState({ [name]: value });
+
+  }
+  
+  render() {
+    const { heading, description, install_button, bgcolor, textcolor} = this.state;
+    return(
+      <div className='banner-page'>
+        
+          <UpdateBanner heading = {heading}  description= {description} bgcolor= {bgcolor} textcolor={textcolor} install_button={install_button} handleChange={this.handleChange}/>
+          <Banner heading = {heading}  description= {description} bgcolor= {bgcolor} textcolor={textcolor} install_button={install_button}/>
+       
+      </div>
+    );
+  }
 }
 
 export default App;
